@@ -3,6 +3,7 @@
 ## Table of Content
 
 - [Description](#description)
+- [Website Preview](#website-preview)
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Development](#development)
@@ -14,6 +15,14 @@
 [Back to top](#table-of-content)
 
 This project is a multi-section landing page with a dynamically updating navigational menu based on the amount of content using JavaScript and DOM. Adding functionality to distinguish the section in view and scrolling effect, where clicking on a navigation item should scroll to the appropriate section of the page. So, it is basically converting static web to a dynamic page.
+
+## Website Preview
+
+[Back to top](#table-of-content)
+
+![Website Preview Image](landingPageInterface.png "Website View")
+
+***
 
 ## Technologies
 
