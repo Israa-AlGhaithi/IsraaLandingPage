@@ -48,7 +48,7 @@ Follow the steps below to get started with this project’s development environm
 
 1. First, install Node from [Node](https://nodejs.org/en).
 2. Second, choose your favorite code editor for example [Visual Studio Code](https://code.visualstudio.com/).
-3. Clone this repository: [Landing Page project repo]().
+3. Clone this repository: [Landing Page project repo](https://github.com/Israa-AlGhaithi/LandingPage-Udacity-project.git).
 4. Open the project in your preferred text editor or IDE.
 5. Open the `index.html` file in your web browser.
 
