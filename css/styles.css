@@ -1,0 +1,360 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ *
+ * For simplicity, no reset or normalize is added.
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* TODO: for smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* ---- Base Rules ---- */
+body {
+    background-color: rgb(136,203,171);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+}
+
+
+/* Back to top button */
+#scroll-btn{
+    display: none;
+    border: 0.3em solid white;
+    border-radius: 0.2em;
+    position: fixed;
+    right: 0.5em;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 0.2em;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    bottom: 0.4em;
+    color: white;
+    cursor: pointer;
+    z-index: 99; /* this i do it according to  w3school: P.S. I provide the link in app.js file  */
+}
+
+
+#scroll-btn:hover {
+    border: 0.4em solid white;
+}
+
+
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3em;
+    margin: 2em 1rem;
+}
+
+.subhead-span {
+    font-family: cursive;
+    font-size: 1.5em;
+    color:  rgba(51, 204, 51, 0.5);
+    text-shadow: black;
+    float: right;
+
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+
+    .navbar__menu {
+       font-size: 1.2em;
+    }
+}
+
+h2 {
+    border-bottom: 1px solid #cc1;
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+p > em {
+    color: black;
+    font-weight: 700;
+}
+
+
+.icons-group {
+    max-width: 20rem;
+}
+
+
+.leftimg {
+    border-radius: 6em 0 6em 0;
+}
+
+
+.rightimg {
+    border-radius: 0 6em 0 6em;
+}
+
+
+/* ---- Layout Rules ---- */
+main {
+    margin: 10vh 1em 10vh;
+}
+
+.main-hero {
+    min-height: 40vh;
+    padding-top: 3em;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+
+/* ---- Module Rules ---- */
+
+/* Navigation Styles*/
+.navbar__menu {
+    top: 1vh;
+    right: 0;
+    transition: top 0.3s;
+    position: inherit;
+    width: 100%;
+    min-height: 8vh;
+    max-height: 15vh;
+    /*   position: fixed;
+   display: flex;
+   flex-direction: row;
+   top: 0;
+    right: 0;
+    /*min-height: 7vh;*
+   background-color: ; *..*
+   transition: top 0.3s; * ..
+   */
+
+}
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-flex; /*...*/
+}
+
+.navbar__menu .menu__link {
+    display: inline-flex; /*..*/
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    font-size: 1em; /*..*/
+}
+
+.navbar__menu:hover .menu__link:hover {
+    background: #333;
+    color: #fff;
+    transition: ease 0.3s all;
+}
+
+/* TODO: set the style for the acive menu link */
+.menu__link__active{
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(51, 204, 51, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* Header Styles */
+.page__header {
+    background-color: #fff;
+   /* display: flex; /*..*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 9vh; /*..*/
+    max-height: 15vh; /*..*/
+    z-index: 5;
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 3em;
+    color: #fff;
+}
+
+.page__footer p{
+    color: #fff;
+}
+
+
+.page__footer > p > strong {
+    color: rgba(102, 207, 102, 0.5);
+    text-shadow: white;
+}
+
+
+.page__footer > p > b {
+    font-family: cursive;
+}
+
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: 1em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        max-width: 50em;
+        padding: 4em;
+    }
+}
+
+section:nth-of-type(even) .landing__container {
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+.active {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(51, 204, 51, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/*
+.active .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+.active .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}*/
+
+/* Section Active Styles Keyframe Animations *
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em)
+		           rotate(-360deg);
+	}
+}*/
+
+/* trying to solve the Tips in the Performance tab: i don't remember exact reference cause i read in many website:
+about using visibilty over opacity.
+using will-change and translate3d and so on.. */
+.active .landing__container::before {
+    visibility: visible;
+    will-change: transform;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+.active .landing__container::after {
+    visibility: visible;
+    will-change: transform;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate3d(-1em, 0, 0)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate3d(-1em, 0, 0)
+		           rotate(-360deg);
+	}
+}

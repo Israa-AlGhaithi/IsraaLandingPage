@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <!-- main css styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" href="#" />
+  </head>
+
+  <body>
+
+
+    <!-- scroll back to top button -->
+    <button id="scroll-btn" class="btn" type="button">UP</button>
+
+
+    <!-- HTML Follows BEM naming conventions
+    IDs are only used for sections to connect menu achors to sections -->
+    <header class="page__header">
+        <nav class="navbar__menu">
+        <!-- Navigation starts as empty UL that will be populated with JS -->
+        <ul id="navbar__list"></ul>
+
+      </nav>
+    </header>
+
+
+    <!-- main content -->
+    <main>
+        <header class="main__hero">
+            <h1>Best Indoor Plants</h1>
+            <span class="subhead-span"> green your home ..</span>
+        </header>
+        <!-- Each Section has an ID (used for the anchor) and
+        a data attribute that will populate the li node.
+        Adding more sections will automatically populate nav.
+        The first section is set to active class by default -->
+        <section id="pothos" data-nav="Pothos" class="active">
+            <div class="landing__container">
+            <img src="assets/pothos.jpg" alt="Pothos Image" class="icons-group leftimg">  <!-- img from the Internet -->
+            <h2>Pothos</h2>
+            <p><em>Pothos</em>, or <em>ivy</em>, is one of the most successful indoor ornamental plants in hot climates. Therefore, it is very successful inside homes in dry areas and is considered one of the most patient indoor plants. It is a beautiful plant, you'll love how the leaves of a silver satin pothos shimmer when the light hits them especially if it used in hanging pots, where its branches hang with its bright green leaves. For example, long branches can be wrapped on plastic wires and extended to different sides of the room or office to fill the place with its leaves, making it appear as a climbing plant. It is easy to handle and care for and you can easily expand your plant family by propagating these from cuttings. Keep yours in partial to bright indirect light, and water it when the soil is mostly dry. It is one of the indoor plants that is suitable for beginners. </p>
+            </div>
+        </section>
+
+
+        <section id="bamboo" data-nav="Bamboo">
+            <div class="landing__container">
+            <img src="assets/bamboo.jpg" alt="Bamboo Image" class="icons-group rightimg">  <!-- img from the Internet -->
+            <h2>Bamboo</h2>
+            <p><em>The bamboo plant</em>, or Lucky <em>Bamboo</em>, whose scientific name is <em>Dracena Sanderiana</em>, is a beautiful shrub resembling a reed. It belongs to the lily family, which contains many species. Its original home is the rainforests of Cameroon, and some of them see that its original homeland is Southeast Asia, and its height may reach a meter and a half. It is a plant that accepts shaping with metal wires to take the beautiful spiral shape that we see in the markets, but it requires patience, time, and effort. It needs indirect light and must be protected from direct rays. Because it causes yellowing of the leaves and the wilting of the plant, the water must be changed every day or two when the roots are new, or a week or more if the roots are dense and large. It is preferable that the pot containing the plant is transparent because this benefits the roots and helps them grow if we want it to live long and be in good health. </p>
+            </div>
+        </section>
+
+
+        <section id="cactus" data-nav="Cactus">
+            <div class="landing__container">
+            <img src="assets/cactus.jpg" alt="Cactus Image" class="icons-group leftimg">  <!-- img from the Internet -->
+            <h2>Cactus</h2>
+            <p>The family of small <em>cacti (Cactiaceae)</em> includes very large numbers of species of different shapes and sizes, and one of the strange information regarding the variation in size is that some of them are very small cacti, their length is measured in millimeters, while others are measured in meters. These plants survive drought by storing water in their leaves, stems and roots, so they're the ultimate in easy-care plants. They grow in-ground in warm climates, but they also make fun houseplants if you give them a sunny windowsill. They need direct sunlight with no drafts. They'll thrive under LED grow lights. If they don't receive sufficient light, they tend to get leggy and unattractive. They should be watered only when the soil feels dry to the touch. It is important not to change the pot and place it in large pots because the narrower the pot, the more the cactus will be able to flower. But be careful! Some types of cacti aren't the best choices around kids or pets. Those with sharp spines are better grown outdoors. </p>
+            </div>
+        </section>
+
+
+        <section id="snake" data-nav="Snake">
+            <div class="landing__container">
+            <img src="assets/snake.jpg" alt="Snake Plant Image" class="icons-group rightimg">  <!-- img from the Internet -->
+            <h2>Snake Plant</h2>
+            <p><em>Sansevieria trifasciata plant</em>, another common name is the <em>snake plant</em> or <em>mother-in-law's tongue</em>. It can be recognized by its evergreen sword-shaped leaves that grow upright and almost resemble artificial foliage. It's famous for being one of the best air purifying plants, removing toxic pollutants, and boosting mental health. Indirect light is ideal for these plants, along with light waterings only after the soil has fully dried. Under appropriate conditions, it can produce fragrant flowers, and it reproduces quickly. It reproduces by means of its small growths protruding from the base of the stem when it is in contact with the ground. They are called (plant babies), and it is preferable to transport them and plant them in the spring. The baby can be removed and planted directly if it contains roots. If it does not contain roots, it can be dried for two or three days in a shaded place and then planted in order to avoid getting rotten. The leaves of the plant can also be cut and placed in water until the roots of the plant grow, then transferred to the soil. </p>
+            </div>
+        </section>
+
+
+        <section id="orchids" data-nav="Orchids">
+            <div class="landing__container">
+            <img src="assets/orchid.jpg" alt="Orchids Image" class="icons-group leftimg"> <!-- img from the Internet -->
+            <h2>Phalaenopsis orchids </h2>
+            <p>Which symbolizes love and romance and is also called <em>the flower of kings</em>. <em>Orchids</em> are classified as plants characterized by their attractive, multi-colored flowers. It gives the place an elegant and beautiful appearance. There are thousands of orchids to choose from, orchids from the Phalaenopsis genus remain the most popular ones because they are a particularly good orchid choice for beginners. The flower stalks of these orchids grow from leaf joints, or axils, and often bear multiple flower buds, which can bloom for a month or more when properly cared for. A single multi-branching flower spike can have more than 20 flowers, and individual flowers can last for weeks. It loves light without exposure to direct sunlight. It is watered only when the soil is semi-dry, at a rate of one watering per week during the flowering time or every ten days during the period of normal growth without flowering. </p>
+            </div>
+        </section>
+
+
+
+        <!-- a random tester just to check: info from the Internet --
+        <section id="monstera" data-nav="Monstera">
+          <div class="landing__container">
+          <img src="assets/monstera.jpg" alt="Orchids Image" class="icons-group rightimg">
+          <h2>Monstera </h2>
+          <p><em>Monstera</em> plants are a group of tropical plants that belong to the arum family. They are popular as houseplants because of their attractive and distinctive foliage, which often has holes or splits. Monstera plants can grow up to 15 feet tall indoors, and they need bright indirect light, well-drained soil, and regular watering. Some monstera species also produce edible fruits that taste like a combination of pineapple and banana. Monstera plants are native to Central and South America, where they grow in the understory of rainforests1 </p>
+          </div>
+        </section> -->
+
+
+      </main>
+
+    <!-- footer -->
+    <footer class="page__footer">
+      <p>&copy Udacity | <b>green your home ..</b> <strong>Israa Al-Ghaithi</strong>. 2024</p>
+    </footer>
+
+    <!-- script link -->
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
